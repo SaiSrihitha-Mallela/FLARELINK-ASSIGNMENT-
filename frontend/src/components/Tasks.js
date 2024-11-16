@@ -24,7 +24,13 @@ const Tasks = () => {
     const fetchTasks = async()=>{
         try{
             const response = await axios.get('http://localhost:5000/tasks');
-            setTasks(response.data);
+            console.log('Response data:', response.data);
+            const sortedTasks = response.data.tasks.sort((a,b)=>{
+                const priorities = {High:1, Medium:2, Low:3};
+                return priorities[a.priority] - priorities[b.priority];
+            });
+            setTasks(sortedTasks);
+            // setTasks(response.data);
         }
         catch(error){
             console.error('Error fetching tasks:', error);
@@ -36,7 +42,8 @@ const Tasks = () => {
         setFormData({...formData, [name]: value});
     };
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
         const { title, description, startDate, endDate, priority } = formData;
         if (title && description && startDate && endDate && priority) {
             try {
@@ -46,9 +53,19 @@ const Tasks = () => {
                 setShowForm(false);
             } catch (error) {
                 console.error('Error adding task:', error);
+                alert("error submitting the task. Check console for details.");
             }
         } else {
             alert('All fields are required!');
+        }
+    };
+
+    const markAsImportant = async (id) =>{
+        try{
+            await axios.patch(`http://localhost:5000/tasks/${id}/important`);
+            fetchTasks();
+        }catch (error) {
+            console.error('Error marking task as important:', error);
         }
     };
 
@@ -71,6 +88,7 @@ const Tasks = () => {
                 <br></br>
                 <b>Welcome to a new beginning! Your first task is the first step toward achieving great things.</b>
                 <b>Let's get started—small steps today lead to big accomplishments tomorrow! </b></div>}
+
                 <div className="task-list">
                     {tasks.map((task) => (
                         <div key={task._id} className="task-card">
@@ -80,6 +98,8 @@ const Tasks = () => {
                             <p>End: {new Date(task.endDate).toLocaleDateString()}</p>
                             <p>Priority: {task.priority}</p>
                             <button onClick={() => handleDeleteTask(task._id)}>Delete</button>
+                            <button onClick={() => markAsImportant(task._id)}>Mark as Important</button>
+
                         </div>
                     ))}
                 </div>
@@ -87,6 +107,9 @@ const Tasks = () => {
                 <button className="create-button" onClick={() => setShowForm(true)}>+ Create</button>
 
                 {showForm && (
+                  <form onSubmit={handleSubmit}>
+
+                  
                     <div className="task-form-overlay">
                         <div className="task-form">
                             <h2>Create New Task</h2>
@@ -134,6 +157,7 @@ const Tasks = () => {
                             <button className='custom-btnn' onClick={() => setShowForm(false)}>Close</button>
                         </div>
                     </div>
+                  </form>
                 )}
             </div>
         </>
