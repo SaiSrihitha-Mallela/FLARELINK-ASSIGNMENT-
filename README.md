@@ -30,23 +30,24 @@ bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 
-###Setup Backend (Node.js & Express)
+Setup Backend (Node.js & Express)
 Install Backend Dependencies
 Navigate to the backend folder and install the necessary dependencies:
 cd backend
 npm install
 
-###Configure Environment Variables
+Configure Environment Variables
 Create a .env file in the backend folder and add the following environment variables:
 MONGO_URI=your-mongodb-uri
 PORT=5000
 
-###Run the Backend Server
+Run the Backend Server
 Start the backend server : npm start
 
-###Setup Frontend (React.js)
+Setup Frontend (React.js)
 -cd frontend
 -Install Frontend Dependencies : npx create-react-app frontend
+-npm i axios react-router-dom 
 -npm start
 
 ## Components and Functionality
@@ -91,21 +92,21 @@ Start the backend server : npm start
 ### 1. Dashboard (Home Page)
 ![Dashboard](assets/dashboard.png)
 
-### 2. Completed Tasks Page
+### 2. Active Tasks Page
+![Dashboard](assets/activetasks.png)
+
+### 3. Completed Tasks Page
 ![Completed Tasks](assets/completedtasks.png)
 
-### 3. Important Tasks Page
+### 4. Important Tasks Page
 ![Important Tasks](assets/importanttasks.png)
 
-### 4. Deleted Tasks (Bin) Page
+### 5. Deleted Tasks (Bin) Page
 ![Deleted Tasks](assets/bin.png)
 
-### 5. Active Tasks Page
+### 6. Active Tasks Page
 ![Dashboard](assets/activetasks.png)
 
 
 ---
-
-That's it! You've now created a professional **README.md** file for your GitHub repository. Make sure to adjust the content and links according to your actual project setup.
-
-
+Happy Hacking!!!
