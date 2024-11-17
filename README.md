@@ -21,30 +21,30 @@ This is a **task management application** built using the **MERN Stack** (MongoD
 
 ## Setup and Launch Process
 
-Follow the steps below to set up the project locally:
+-Follow the steps below to set up the project locally:
 
 ### 1. Clone the Repository
-First, clone the repository to your local machine:
+-First, clone the repository to your local machine:
 
 bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+-git clone https://github.com/your-username/your-repo-name.git
+-cd your-repo-name
 
-Setup Backend (Node.js & Express)
-Install Backend Dependencies
-Navigate to the backend folder and install the necessary dependencies:
-cd backend
-npm install
+-Setup Backend (Node.js & Express)
+-Install Backend Dependencies
+-Navigate to the backend folder and install the necessary dependencies:
+-cd backend
+-npm install
 
-Configure Environment Variables
-Create a .env file in the backend folder and add the following environment variables:
-MONGO_URI=your-mongodb-uri
-PORT=5000
+-Configure Environment Variables
+-Create a .env file in the backend folder and add the following environment variables:
+-M-ONGO_URI=your-mongodb-uri
+-PORT=5000
 
-Run the Backend Server
-Start the backend server : npm start
+-Run the Backend Server
+-Start the backend server : npm start
 
-Setup Frontend (React.js)
+-Setup Frontend (React.js)
 -cd frontend
 -Install Frontend Dependencies : npx create-react-app frontend
 -npm i axios react-router-dom 
