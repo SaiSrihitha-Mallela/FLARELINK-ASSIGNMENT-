@@ -105,8 +105,6 @@ bash
 ### 5. Deleted Tasks (Bin) Page
 ![Deleted Tasks](assets/bin.png)
 
-### 6. Active Tasks Page
-![Dashboard](assets/activetasks.png)
 
 
 ---
