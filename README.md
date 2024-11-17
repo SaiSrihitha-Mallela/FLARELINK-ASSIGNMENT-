@@ -27,8 +27,9 @@ This is a **task management application** built using the **MERN Stack** (MongoD
 -First, clone the repository to your local machine:
 
 bash
--git clone https://github.com/your-username/your-repo-name.git
--cd your-repo-name
+-git clone https://github.com/SaiSrihitha-Mallela/FLARELINK-ASSIGNMENT-.git
+-cd FLARELINK-ASSIGNMENT-
+
 
 -Setup Backend (Node.js & Express)
 -Install Backend Dependencies
