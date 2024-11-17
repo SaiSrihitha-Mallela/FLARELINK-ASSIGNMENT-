@@ -6,7 +6,9 @@ const TaskSchema = new mongoose.Schema({
     startDate: { type: Date, required: true },
     endDate: { type: Date, required: true },
     priority: { type: String, required: true, enum: ['High', 'Medium', 'Low'] },
-    // isImportant: { type: Boolean, default: false }, // isImportant field
+    isCompleted: { type: Boolean, default: false },
+    isDeleted: { type: Boolean, default: false },
+    deletedAt: { type: Date, default: null },
 });
 
 const Task = mongoose.model('Tasks', TaskSchema);

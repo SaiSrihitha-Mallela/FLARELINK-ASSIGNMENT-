@@ -17,23 +17,23 @@ const Sidebar = () => {
             <i className="bi bi-house-door"></i> Home
           </Link>
         </li>
-        {/* <li className="menu-item">
-          <Link to="/tasks" className="menu-link">
-            <i className="bi bi-list-task"></i> All Tasks
-          </Link>
-        </li> */}
         <li className="menu-item">
-          <Link to="/completed" className="menu-link">
+          <Link to="/tasks" className="menu-link">
+            <i className="bi bi-list-task"></i> Active Tasks
+          </Link>
+        </li>
+        <li className="menu-item">
+          <Link to="/completedtasks" className="menu-link">
             <i className="bi bi-check-circle"></i> Completed Tasks
           </Link>
         </li>
         <li className="menu-item">
-          <Link to="/important" className="menu-link">
+          <Link to="/imptasks" className="menu-link">
             <i className="bi bi-star-fill"></i> Important Tasks
           </Link>
         </li>
         <li className="menu-item">
-          <Link to="/bin" className="menu-link">
+          <Link to="/binpage" className="menu-link">
             <i className="bi bi-trash"></i> Bin
           </Link>
         </li>
