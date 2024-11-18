@@ -21,35 +21,37 @@ This is a **task management application** built using the **MERN Stack** (MongoD
 
 ## Setup and Launch Process
 
--Follow the steps below to set up the project locally:
+- Follow the steps below to set up the project locally:
 
 ### 1. Clone the Repository
--First, clone the repository to your local machine:
+- First, clone the repository to your local machine:
 
-bash
--git clone https://github.com/SaiSrihitha-Mallela/FLARELINK-ASSIGNMENT-.git
--cd FLARELINK-ASSIGNMENT-
+### bash
+- git clone https://github.com/SaiSrihitha-Mallela/FLARELINK-ASSIGNMENT-.git
+- cd FLARELINK-ASSIGNMENT-
 
+### Setup Backend (Node.js & Express)
+- **Install Backend Dependencies**
+- Navigate to the backend folder and install the necessary dependencies:
+- cd backend
+- npm init -y (for package.json)
+- npm install node-modules
+- npm install axios cors nodemon mongoose 
+- npm start 
 
--Setup Backend (Node.js & Express)
--Install Backend Dependencies
--Navigate to the backend folder and install the necessary dependencies:
--cd backend
--npm install
+### Configure Environment Variables
+- Create a .env file in the backend folder and add the following environment variables:
+- M-ONGO_URI = your-mongodb-uri
+- PORT=5000
 
--Configure Environment Variables
--Create a .env file in the backend folder and add the following environment variables:
--M-ONGO_URI=your-mongodb-uri
--PORT=5000
+### Run the Backend Server
+- **Start the backend server** : npm start
 
--Run the Backend Server
--Start the backend server : npm start
-
--Setup Frontend (React.js)
--cd frontend
--Install Frontend Dependencies : npx create-react-app frontend
--npm i axios react-router-dom 
--npm start
+- Setup Frontend (React.js)
+- cd frontend
+- Install Frontend Dependencies : npx create-react-app frontend
+- npm i axios react-router-dom react-bootstrap 
+- npm start
 
 ## Components and Functionality
 
@@ -65,7 +67,8 @@ bash
   - Overdue tasks
   - Upcoming tasks
   - Priority distribution (High, Medium, Low)
-- **Task Management**: Users can view, add, mark tasks as completed, and delete tasks.
+- **Task Management**: Users can view, add, mark tasks as completed and delete tasks.
+- **New Task Form**: User can create a new task by filling the new task from , which contains tile , description, start data , end data and setting priority feilds.
 - **Completed Tasks Page**: Displays all tasks that have been completed.
 - **Important Tasks Page**: Displays tasks marked as high priority.
 - **Deleted Tasks Page (Bin)**: Displays tasks that have been marked for deletion but are not yet permanently deleted. Users can permanently delete tasks from here.
@@ -94,18 +97,21 @@ bash
 ![Dashboard](assets/dashboard.png)
 
 ### 2. Active Tasks Page
-![Dashboard](assets/activetasks.png)
+![Active Tasks](assets/activetasks.png)
 
-### 3. Completed Tasks Page
+### 3 . Create New Task
+![create New Task](assets/CreateTask.png)
+
+### 4. Completed Tasks Page
 ![Completed Tasks](assets/completedtasks.png)
 
-### 4. Important Tasks Page
+### 5. Important Tasks Page
 ![Important Tasks](assets/importanttasks.png)
 
-### 5. Deleted Tasks (Bin) Page
+### 6. Deleted Tasks (Bin) Page
 ![Deleted Tasks](assets/bin.png)
 
 
 
 ---
-Happy Hacking!!!
+Happy Task mamanagement!!!
